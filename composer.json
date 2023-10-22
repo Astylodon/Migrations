@@ -1,0 +1,14 @@
+{
+    "name": "astylodon/migrations",
+    "description": "A simple database migrations library for PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Astylodon\\Migrations\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.1"
+    }
+}
