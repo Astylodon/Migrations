@@ -13,6 +13,8 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Test
+        env:
+          XDEBUG_MODE: coverage
         run: vendor/bin/phpunit --coverage-clover coverage.xml tests
 
       - name: Upload coverage
