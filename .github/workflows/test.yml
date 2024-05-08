@@ -13,4 +13,11 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Test
-        run: vendor/bin/phpunit tests
+        env:
+          XDEBUG_MODE: coverage
+        run: vendor/bin/phpunit --coverage-clover coverage.xml tests
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

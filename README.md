@@ -10,11 +10,11 @@ composer require astylodon/migrations
 
 ### Database
 
-This library is independent of a database implementation, we instead provide a `DatabaseInterface` interface that should be implemented by the database implementation.
+This library is independent of a database implementation, instead a `DatabaseInterface` interface is provided that should be implemented by the database implementation.
 
 ### Example
 
-Create a file that you will invoke when your migrations run.
+Create a file that you will invoke to run your migrations.
 
 ```php
 <?php
